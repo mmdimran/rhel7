@@ -2,7 +2,8 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Disable Selinux
-    ansible.posix.selinux:
-      status: disabled
+  - name: Stop network manager service
+    ansible.builtin.systemd:
+      name: NetworkManager
+      state: stopped
       
