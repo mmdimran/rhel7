@@ -4,6 +4,7 @@
   tasks:
   - name: Stop network manager service
     ansible.builtin.systemd:
-      name: NetworkManager
-      state: stopped
+      name: httpd
+      state: started
+      enabled: true
       
