@@ -7,14 +7,12 @@
     ansible.builtin.systemd:
       state: started
       name: httpd
-    become: true
-    become_method: sudo
+ 
 
   - name: remove expiry time
     ansible.builtin.user:
       name: test2
       expires: -1
-    become: true
-    become_method: sudo
+
     
       
