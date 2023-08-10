@@ -9,4 +9,12 @@
       name: httpd
     become: true
     become_method: sudo
+
+  - name: remove expiry time
+    ansible.builtin.user:
+      name: svc
+      expires: -1
+    become: true
+    become_method: sudo
+    
       
