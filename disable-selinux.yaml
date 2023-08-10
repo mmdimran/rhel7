@@ -1,0 +1,6 @@
+---
+
+- name: Disable selinux
+  ansible.posix.selinux:
+    status: disabled
+
