@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- name: make changes to RHEL 7 os
   become: true
   tasks:
   - name: Start httpd service
