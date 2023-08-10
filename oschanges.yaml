@@ -12,7 +12,7 @@
 
   - name: remove expiry time
     ansible.builtin.user:
-      name: svc
+      name: mi31
       expires: -1
     become: true
     become_method: sudo
