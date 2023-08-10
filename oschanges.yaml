@@ -2,9 +2,8 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Stop network manager service
+  - name: Start httpd service
     ansible.builtin.systemd:
-      name: httpd.service
       state: started
-      enabled: true
+      name: httpd
       
