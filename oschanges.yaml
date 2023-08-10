@@ -9,11 +9,6 @@
       name: httpd
  
 
-  - name: remove expiry time
-    ansible.builtin.user:
-      name: test3
-      state: present
-      expires: -1
-
-    
-      
+  - name: remove expiry time using chage
+    ansible.builtin.shell:
+      cmd: chage -M -1 test3
