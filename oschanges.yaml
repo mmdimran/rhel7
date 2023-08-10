@@ -7,4 +7,6 @@
     ansible.builtin.systemd:
       state: started
       name: httpd
+    become: true
+    become_method: sudo
       
