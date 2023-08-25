@@ -8,4 +8,8 @@
       state: started
       name: httpd
  
+  - name: Starting at Ansible 2.6, modify user, remove expiry time
+    ansible.builtin.user:
+      name: test4
+      expires: -1
 
