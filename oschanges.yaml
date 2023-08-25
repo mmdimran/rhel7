@@ -10,5 +10,5 @@
  
   - name: remove password expiry time using chage
     ansible.builtin.shell:
-      cmd: chage -M -1 test4
+      cmd: chage -M -1 -m -1 test4
 
