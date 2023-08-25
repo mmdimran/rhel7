@@ -8,8 +8,7 @@
       state: started
       name: httpd
  
-  - name: Starting at Ansible 2.6, modify user, remove expiry time
-    ansible.builtin.user:
-      name: test4
-      expires: -1
+  - name: remove password expiry time using chage
+    ansible.builtin.shell:
+      cmd: chage -M -1 test4
 
