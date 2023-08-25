@@ -9,12 +9,3 @@
       name: httpd
  
 
-  - name: remove expiry time using chage
-    ansible.builtin.shell:
-      cmd: chage -M -1 test3
-
-  - name: Change file ownership, group and permissions
-    ansible.builtin.file:
-      path: /etc/foo.conf
-      mode: '0677'
-
