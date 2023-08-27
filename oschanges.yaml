@@ -2,7 +2,7 @@
 - name: make changes to RHEL 7 os
   hosts: all
   become: true
-  gather_facts: False
+  gather_facts: no
   tasks:
   - name: Start httpd service
     ansible.builtin.systemd:
